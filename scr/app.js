@@ -3,6 +3,7 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const port = process.env.PORT || 3000
 
 // const geocode = require('./utils/geocode')
 // const forecast = require('./utils/forecast')
@@ -87,52 +88,6 @@ app.get('/weather',(req,res) =>{
 
 })
 
-//
-// app.get('/weather',(req,res)=>{
-
-//    if (!req.query.address){
-//      return res.send({
-//        error:'Kindly provide the address details like city '
-//      })
-//    }else{
- 
-
-// geocode(req.query.address, (error, {latitude,longitute,location} ) =>{
-//   if (error)
-//         {
-//           return  res.send({ error })
-//         }
-//     })
-
-      
-
-    
-//     forecast(latitude,longitute,(error,forecastData) =>{
-//     if (error)
-//     {
-//       return  res.send({
-//         error:error
-//       })
-//     }
-//     res.send({
-//       location: location,
-//       forecast: forecastData,
-//       address: req.query.address
-  
-//   }) 
-// })
-
-
-//    }
-//  })
-
-
-
-     
-
-
-
-
 
 
 app.get('/products',(req,res)=>{
@@ -168,6 +123,6 @@ app.get('*',(req,res)=>{
    })
 })
 
-app.listen(3000, ()=>{
-       console.log('Server is UP in port 3000')
+app.listen(port, ()=>{
+       console.log('Server is UP in port '+ port)
 })
