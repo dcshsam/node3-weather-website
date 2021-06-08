@@ -3,7 +3,7 @@ body{
   color: #333333;
   font-family: Arial;
   max-width: 650px;
-  margin: 0 auto;
+  margin: 1 auto;
   padding: 0 16px;
   
   display: flex;
